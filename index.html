@@ -1,44 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Manipulación del DOM básica - Curso Práctico de JavaScript</title>
+  <title>Cierre de Turno - Sistema de Caja</title>
 </head>
 <body>
-
-  <div id="card">
-
-    <div id="container">
-  <h1>Cierre de Turno</h1>
-
-  <form id="form">
-    <label for=""> Gastos :</label>
-    <input id="calculo1" placeholder="Gastos Total "  required/>
-    <label for="">Fondo Antiguo :</label>
-    <input id="calculo2" placeholder="Fondo Antiguo"  required />
-    <label for=""> Fondo Nuevo :</label>
-    <input id="calculo3" placeholder="Fondo Nuevo"  required/>
-    <label for=""> Tickets :</label>
-    <input id="calculo4" placeholder="Tickets"  required/>
-    <label for=""> Efectivo :</label>
-    <input id="calculo5" placeholder="Efectivo"/>
-    <label for="">Cierre de Turno :</label>
-    <input id="calculo6" placeholder="Cierre caja"  required>
-
-    <br>
-
-    <button id="btnCalcular" >Calcular</button>
-
-    <p id="result"></p>
-    <p id="Descuadre"></p>
-    <p id="cierre"></p>
-  </form>
-
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Cierre de Turno</h1>
+      </div>
+      <div class="card-body">
+        <form id="form">
+          <div class="form-group">
+            <label for="calculo1">Gastos:</label>
+            <input type="number" id="calculo1" placeholder="Ingrese gastos totales" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="calculo2">Fondo Antiguo:</label>
+            <input type="number" id="calculo2" placeholder="Ingrese fondo antiguo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="calculo3">Fondo Nuevo:</label>
+            <input type="number" id="calculo3" placeholder="Ingrese fondo nuevo" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="calculo4">Tickets:</label>
+            <input type="number" id="calculo4" placeholder="Ingrese total de tickets" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="calculo5">Efectivo:</label>
+            <input type="number" id="calculo5" placeholder="Ingrese efectivo">
+          </div>
+          
+          <div class="form-group">
+            <label for="calculo6">Cierre de Caja:</label>
+            <input type="number" id="calculo6" placeholder="Ingrese cierre de caja" required>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" id="btnCalcular">Calcular</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="card-footer">
+        <div class="results">
+          <div class="result-item">
+            <h3>Resultado:</h3>
+            <p id="result">-</p>
+          </div>
+          <div class="result-item">
+            <h3>Descuadre:</h3>
+            <p id="Descuadre">-</p>
+          </div>
+          <div class="result-item">
+            <h3>Cierre:</h3>
+            <p id="cierre">-</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-  <script src="./script.js"></script>
+  
+  <script src="script.js"></script>
 </body>
 </html>
